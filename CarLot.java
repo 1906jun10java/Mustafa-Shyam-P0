@@ -1,9 +1,11 @@
-package project0;
+package project0.functions;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
+import project0.beans.Car;
 
 public class CarLot extends Car {
 
@@ -13,25 +15,36 @@ public class CarLot extends Car {
 	}
 
 	public static List<Car> cars = new ArrayList<>();
+	
+	
 
-	static void addCar(Car c) { 
+	public static void addCar(Car c) { 
 		cars.add(c);
 
 	}
 
-	static void removeCar(Car c) {
+	public static void removeCar(Car c) {
 		cars.remove(c);
 
 	}
 
 	public static void ViewCar(List<Car> c) {
-		Iterator<Car> it = cars.iterator();
-		while (it.hasNext()) {
-			System.out.println(it.next());
-
+		for(Car car: cars) {
+			
+			System.out.println(car);
+			}
+			
 		}
+	
+	
+	public static void Payment(int n) {
+		Car c = cars.get(0);
+		double principal = c.getCost() - 1000;
+		double interest_rate = .0421;
+		int numMonths = n;
+		double payment = (principal * interest_rate)/(1 - Math.pow(1+interest_rate, -numMonths));
 		
-
+		System.out.println("Payment due: "+payment);
 	}
 
 	@Override
