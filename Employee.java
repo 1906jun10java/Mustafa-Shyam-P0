@@ -1,7 +1,7 @@
-package project0;
+package project0.beans;
 
 public class Employee extends User {
-	private String name;
+	private String password;
 	private int id;
 	
 	public Employee() {
@@ -9,12 +9,18 @@ public class Employee extends User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getName() {
-		return name;
+	public Employee(String password, int id) {
+		super();
+		this.password = password;
+		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getPassword() {
+		return password;
+	}
+
+	public void setName(String password) {
+		this.password = password;
 	}
 
 	public int getId() {
@@ -27,7 +33,7 @@ public class Employee extends User {
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", id=" + id + "]";
+		return "Employee [password=" + password + ", id=" + id + "]";
 	}
 	
 	

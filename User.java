@@ -1,43 +1,29 @@
-package project0;
+package project0.beans;
 
-public class User<T>{
-	private T Username;
-	private T Password;
+public abstract class User {
 	
-	public User(T username, T password) {
-		super();
-		Username = username;
-		Password = password;
+	private String username;
+	private String password;
+	
+	public String getUsername() {
+		return username;
 	}
-
-	public User() {
-		// TODO Auto-generated constructor stub
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
-	public T getUsername() {
-		return Username;
+	public String getPassword() {
+		return password;
 	}
-
-	public void setUsername(T username) {
-		Username = username;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-
-	public T getPassword() {
-		return Password;
-	}
-
-	public void setPassword(T password) {
-		Password = password;
-	}
-
 	@Override
 	public String toString() {
-		return "User [Username=" + Username + ", Password=" + Password + "]";
+		return "User [username=" + username + ", password=" + password + "]";
 	}
 	
-	
-	
-	
-	
 
+	
+	
 }
+
